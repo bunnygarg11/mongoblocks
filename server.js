@@ -15,7 +15,13 @@ MongoClient.connect(db_path,(err,client)=>{
     // ],(err,res)=>{
     //     console.log(res)
     // })
-    people.find({}).toArray((err,res)=>{
+    // people.find({}).toArray((err,res)=>{
+    //     if(err)throw err
+    //     console.log(res)
+    // })
+    people.find({
+        name:"mohit"
+    }).toArray((err,res)=>{
         if(err)throw err
         console.log(res)
     })
